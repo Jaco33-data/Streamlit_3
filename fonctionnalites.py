@@ -55,7 +55,7 @@ if st.session_state["authentication_status"]:
     if selection == "🕶️😑 Accueil":
         st.title("Welcome on my page")
         st.header("Ici, ma page d'accueil !")
-        st.image("images/accueil.png")
+        st.image("images/accueil.jpeg")
 
     elif selection == "🕶️😼Photos":
         st.header("Et ici, la galérie d'art")  
@@ -66,17 +66,17 @@ if st.session_state["authentication_status"]:
         # Contenu de la première colonne : 
         with col1:
             st.subheader("A l'heure du festin")
-            st.image("images/souriant.png")
+            st.image("images/souriant.jpeg")
 
         # Contenu de la deuxième colonne :
         with col2:
             st.subheader("Après le festin")
-            st.image("images/epuise.png")
+            st.image("images/epuise.jpeg")
 
         # Contenu de la troisième colonne : 
         with col3:
             st.subheader("Lorsque le festin est en retard")
-            st.image("images/enerve.png")
+            st.image("images/enerve.jpeg")
 
 # Streamlit qui permet de garder les données entre les interactions de l'utilisateur avec l'application
 elif st.session_state["authentication_status"] is False:
@@ -85,4 +85,5 @@ elif st.session_state["authentication_status"] is None:
     st.warning('Les champs username et mot de passe doivent être remplie')
     st.header("Bonjour à toi, très cher 'Correcteur.'")
     st.header("Je t'exprime par avance toute ma gratitute pour la 'bienveillance' de ta correction.")
+
     
