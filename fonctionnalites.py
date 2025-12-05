@@ -59,7 +59,14 @@ if st.session_state["authentication_status"]:
 
     elif selection == "🕶️😼Photos":
         st.header("Et ici, la galérie d'art")  
-
+        
+        # Upload de fichiers
+        uploaded_file = st.file_uploader("Ajoutez votre image", type=["png","jpg","jpeg"])
+    
+        if uploaded_file is not None:
+        # Affichage de l'image uploadée
+            st.image(uploaded_file, caption="Image uploadée", use_column_width=True)
+            
         # Création de 3 colonnes 
         col1, col2, col3 = st.columns(3)
 
@@ -87,3 +94,4 @@ elif st.session_state["authentication_status"] is None:
     st.header("Je t'exprime par avance toute ma gratitute pour la 'bienveillance' de ta correction.")
 
     
+
